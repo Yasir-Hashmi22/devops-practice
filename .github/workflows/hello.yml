@@ -1,19 +1,24 @@
-name : my first CI Pipeline
+name: My First CI Pipeline
 
-on : push
+on: push
 
 jobs:
   hello-job:
-    runs-on : ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
-    -name: checkout code
-     uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    -name: Say Hello
-      run: echo "Hello Atique! , Your pipeline is Working "
+      - name: Say Hello
+        run: echo "Hello Atique! Your pipeline is working! 🚀"
 
-    -name: show date and Time
-      run: date
-    -name: list files in repo
-      run: ls -la
+      - name: Show date and time
+        run: date
+
+      - name: List files in repo
+        run: ls -la
+```
+
+
+
